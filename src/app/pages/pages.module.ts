@@ -8,6 +8,7 @@ import { OurFavDishesPageComponent } from './our-fav-dishes-page/our-fav-dishes-
 import { OurLetterPageComponent } from './our-letter-page/our-letter-page.component';
 import { ReservationsPageComponent } from './reservations-page/reservations-page.component';
 import { EventsPageComponent } from './events-page/events-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { EventsPageComponent } from './events-page/events-page.component';
     OurFavDishesPageComponent,
     OurLetterPageComponent,
     ReservationsPageComponent,
-    EventsPageComponent
+    EventsPageComponent,
+    HomePageComponent
   ],
   imports: [
     CommonModule,

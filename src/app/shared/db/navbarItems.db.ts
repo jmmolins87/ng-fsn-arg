@@ -11,11 +11,11 @@ export const navbarItems: NavBarInterface[] = [
     {
         label: "NAVBAR_ITEMS.OUR_TEAM",
         icon: "pi pi-users",
-        routerLink: ["/our-team"]
+        routerLink: ["/team"]
     },
     {
         label: "NAVBAR_ITEMS.OUR_FAVORITE_DISHES",
-        icon: "pi pi-heart-fill",
+        icon: "pi pi-heart",
         routerLink: ["/fav-dishes"]
     },
     {
