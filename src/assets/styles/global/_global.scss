@@ -1,64 +1,64 @@
 
+
 // Global styles
 html {
     font-size: 62.5%;
-    font-family: "Instrument Sans", sans-serif;
+    font-family: var(--text-p);
 }
 
-body.light-theme {
-    background: $grey-light-bg;
-    color: $black-light-txt;
+body {
+    background: var(--color-brand);
+    color: var(--color-brand-light);
 }
 
-body.dark-theme {
-    background: $black-light-bg;
-    color: $grey-light-txt;
-}
+// TODO: Add dark theme
+// body.dark-theme {
+//     background: $black-light-bg;
+//     color: $grey-light-txt;
+// }
 
 h1, h2, h3 {
-    font-family: $txt-h;
-    font-weight: $txt-bold;
+    font-family: var(--text-h);
     margin: 2rem 0;
 }
 
 h1 {
-    font-size: $h1-mob;
-    @include min-responsive($tablet) {
-        font-size: $h1-tab;
+    font-size: var(--h1-mob);
+    @include min-responsive(var(--tablet)) {
+        font-size: var(--h1-tab);
     }
-    @include min-responsive($desktop-laptop) {
-        font-size: $h1-desk;
+    @include min-responsive(var(--desktop-laptop)) {
+        font-size: var(--h1-desk);
     }
 }
 
 h2 {
-    font-size: $h2-mob;
-    @include min-responsive($tablet) {
-        font-size: $h2-tab;
+    font-size: var(--h2-mob);
+    @include min-responsive(var(--tablet)) {
+        font-size: var(--h2-tab);
     }
-    @include min-responsive($desktop-laptop) {
-        font-size: $h2-desk;
+    @include min-responsive(var(--desktop-laptop)) {
+        font-size: var(--h2-desk);
     }
 }
 
 h3 {
-    font-size: $h3-mob;
-    @include min-responsive($tablet) {
-        font-size: $h3-tab;
+    font-size: var(--h3-mob);
+    @include min-responsive(var(--tablet)) {
+        font-size: var(--h3-tab);
     }
-    @include min-responsive($desktop-laptop) {
-        font-size: $h3-desk;
+    @include min-responsive(var(--desktop-laptop)) {
+        font-size: var(--h3-desk);
     }
 }
 
-p, a, span {
-    font-family: $txt-p;
-    font-size: $txt-main;
-    font-weight: $txt-regular;
+p, a, span:not(.pi) {
+    font-family: var(--txt-p);
+    font-size: var(--txt-main);
 }
 
 button {
-    border-radius: $border-radius-05;
+    border-radius: var(-border-radius-05);
     cursor: pointer;
 }   
 
@@ -70,6 +70,11 @@ li {
     list-style: none;
 }
 
-.wrap-navbar a {
-    font-size: $txt-menu;
+.navbar a {
+    font-size: var(--txt-menu);
+}
+
+.pi {
+    font-size: var(--txt-main);
+    color: var(--txt-black);
 }

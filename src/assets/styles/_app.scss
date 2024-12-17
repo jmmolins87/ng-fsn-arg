@@ -7,6 +7,10 @@
 @import "./colors/colors";
 @import "./colors/shadows";
 
+// Fonts
+@import "./fonts/text-family";
+@import "./fonts/text-size";
+
 // Responsive sizes
 @import "./sizes-responsive/sizes-responsive";
 
@@ -17,6 +21,6 @@
 @import "./mixins/mixins";
 
 // Globals
-// @import "./scrollbar_custom";
+@import "./scrollbar_custom";
 @import "./global/grid";
-// @import "./global/global";
+@import "./global/global";
