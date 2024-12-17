@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { SharedService } from '../../services/shared.service';
 
@@ -12,16 +14,27 @@ import { TranslatorService } from '../../services/translator.service';
 })
 export class NavBarComponent implements OnInit {
 
-  // get items menu
+  // Get items menu
   public menuItems!: NavBarInterface[] | any[];
+  // When user scrolls page
+  public scrolled: boolean = false;
+
+  public isTablet: boolean = false;
 
   constructor( 
     private _sharedService: SharedService,
-    private _translator: TranslatorService 
+    private _translator: TranslatorService,
+    private _breakpointObserver: BreakpointObserver
   ) {}
 
   ngOnInit(): void {
     this.getItemsNavBar();
+    this.removeAttr();
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.scrolled = window.scrollY > 0;
   }
 
   getItemsNavBar() {
@@ -31,6 +44,15 @@ export class NavBarComponent implements OnInit {
     return this.menuItems;
   }
 
+  // Detect resize
+  removeAttr() {
+    this._breakpointObserver.observe([Breakpoints.Web])
+      .subscribe(result => {
+        this.isTablet = result.matches;
+      })
+  }
+
+  // TODO: in a future
   changeLang( lang: string) {
     this._translator.changeLang(lang);
   }

@@ -1,8 +1,9 @@
 
 
-
-$mobile: 480px;
-$tablet: 768px;
-$tablet-hor: 992px;
-$desktop-laptop: 1200px;
-$desktop: 1600px;
+:root {
+    --mobile: 480px;
+    --tablet: 768px;
+    --tablet-hor: 992px;
+    --desktop-laptop: 1200px;
+    --desktop: 1600px;
+}

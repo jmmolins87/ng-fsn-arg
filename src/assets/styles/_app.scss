@@ -1,4 +1,22 @@
 
 
-
+// Reset
 @import "./normalize";
+
+// Variables
+@import "./colors/colors";
+@import "./colors/shadows";
+
+// Responsive sizes
+@import "./sizes-responsive/sizes-responsive";
+
+// Shapes
+@import "./shapes/shapes";
+
+// Mixins
+@import "./mixins/mixins";
+
+// Globals
+// @import "./scrollbar_custom";
+@import "./global/grid";
+// @import "./global/global";
