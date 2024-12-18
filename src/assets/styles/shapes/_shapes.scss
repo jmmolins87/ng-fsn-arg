@@ -2,10 +2,8 @@
 
 
 // Border radius
-:root {
-    --border-radius-05: 05px;
-    --border-radius-10: 10px;
-    --border-radius-15: 15px;
-    --border-radius-20: 20px;
-    --border-radius-50: 50%;
-}
+$border-radius-05: .5rem;
+$border-radius-10: 1rem;
+$border-radius-15: 1.5rem;
+$border-radius-20: 2rem;
+$border-radius-50: 50%;

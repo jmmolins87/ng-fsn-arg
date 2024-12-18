@@ -7,6 +7,7 @@ import { SharedService } from '../../services/shared.service';
 import { NavBarInterface } from '../../interfaces/nav-bar.interface';
 import { TranslatorService } from '../../services/translator.service';
 
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -46,7 +47,7 @@ export class NavBarComponent implements OnInit {
 
   // Detect resize
   removeAttr() {
-    this._breakpointObserver.observe([Breakpoints.Web])
+    this._breakpointObserver.observe([Breakpoints.Web, Breakpoints.Medium])
       .subscribe(result => {
         this.isTablet = result.matches;
       })

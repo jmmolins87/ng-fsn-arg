@@ -3,12 +3,12 @@
 // Global styles
 html {
     font-size: 62.5%;
-    font-family: var(--text-p);
+    font-family: $txt-p;
 }
 
 body {
-    background: var(--color-brand);
-    color: var(--color-brand-light);
+    background: $color-brand;
+    color: $color-brand-light;
 }
 
 // TODO: Add dark theme
@@ -18,47 +18,47 @@ body {
 // }
 
 h1, h2, h3 {
-    font-family: var(--text-h);
+    font-family: $txt-h;
     margin: 2rem 0;
 }
 
 h1 {
-    font-size: var(--h1-mob);
-    @include min-responsive(var(--tablet)) {
-        font-size: var(--h1-tab);
+    font-size: $h1-mob;
+    @include min-responsive($tablet) {
+        font-size: $h1-tab;
     }
-    @include min-responsive(var(--desktop-laptop)) {
-        font-size: var(--h1-desk);
+    @include min-responsive($desktop-laptop) {
+        font-size: $h1-desk;
     }
 }
 
 h2 {
-    font-size: var(--h2-mob);
-    @include min-responsive(var(--tablet)) {
-        font-size: var(--h2-tab);
+    font-size: $h2-mob;
+    @include min-responsive($tablet) {
+        font-size: $h2-tab;
     }
-    @include min-responsive(var(--desktop-laptop)) {
-        font-size: var(--h2-desk);
+    @include min-responsive($desktop-laptop) {
+        font-size: $h2-desk;
     }
 }
 
 h3 {
-    font-size: var(--h3-mob);
-    @include min-responsive(var(--tablet)) {
-        font-size: var(--h3-tab);
+    font-size: $h3-mob;
+    @include min-responsive($tablet) {
+        font-size: $h3-tab;
     }
-    @include min-responsive(var(--desktop-laptop)) {
-        font-size: var(--h3-desk);
+    @include min-responsive($desktop-laptop) {
+        font-size: $h3-desk;
     }
 }
 
 p, a, span:not(.pi) {
-    font-family: var(--txt-p);
-    font-size: var(--txt-main);
+    font-family: $txt-p;
+    font-size: $txt-main;
 }
 
 button {
-    border-radius: var(-border-radius-05);
+    border-radius: $border-radius-05;
     cursor: pointer;
 }   
 
@@ -71,10 +71,15 @@ li {
 }
 
 .navbar a {
-    font-size: var(--txt-menu);
+    font-size: $txt-menu;
+    transition: font-size .2s ease-in-out;
+}
+
+.navbar.scroll a {
+    font-size: $txt-menu-scrolled;
 }
 
 .pi {
-    font-size: var(--txt-main);
-    color: var(--txt-black);
+    font-size: $txt-main;
+    color: $txt-black;
 }

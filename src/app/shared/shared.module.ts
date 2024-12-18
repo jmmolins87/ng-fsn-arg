@@ -22,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     PrimeNgModule
   ],
   exports: [
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

@@ -6,18 +6,18 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: var(--color-brand-light);
+    background-color: $color-brand-light;
     transition: all .2s ease-in-out;
     &.scroll {
-        background-color: rgba(#f6cc78, .7);
-        backdrop-filter: blur(15px);
-        box-shadow: 0px 10px 15px 0px rgba(#584929, .4);
+        background-color: rgba($color-brand-light, .7);
+        backdrop-filter: blur(1.5rem);
+        box-shadow: $navbar-shadow-light;
         .navbar-brand {
-            height: 65px;
+            height: 6.5rem;
         }
     }
     .navbar-brand {
-        height: 120px;
+        height: 12rem;
         transition: all .2s ease-in-out;
         padding: 0 !important;
         margin: 0 !important;
@@ -41,7 +41,7 @@
             height: .1rem;
             display: block;
             margin: .5rem 0;
-            background-color: black;
+            background-color: $txt-black;
             position: absolute;
             transition: transform .2s ease-in-out;
             &:first-of-type {
@@ -71,7 +71,7 @@
     .navbar-collapse {
         .navbar-nav {
             gap: .5rem;
-            @include min-responsive(var(--tablet)) {
+            @include min-responsive($tablet) {
                 gap: 1.2rem;
             }
             .nav-item {
@@ -80,14 +80,11 @@
                 justify-content: center;
                 align-items: center;
                 gap: .25rem;
-                @include min-responsive(var(--tablet)) {
+                @include min-responsive($tablet) {
                     gap: .1rem;
                 }
-                &.active {
-                    text-shadow: 0 0 1px var(--txt-black);
-                    span {
-                        text-shadow: 0 0 1px var(--txt-black);
-                    }
+                &.active, &.active span {
+                    text-shadow: $text-shadow-items-menu;
                 }
                 .nav-link {
                     padding-left: .25rem;

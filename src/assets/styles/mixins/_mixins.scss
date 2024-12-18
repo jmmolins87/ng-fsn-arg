@@ -1,12 +1,14 @@
 
-@mixin max-responsive($width) {
-    @media screen and (max-width: $width) {
+
+
+@mixin max-responsive($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
         @content;
     }
 }
 
-@mixin min-responsive($width) {
-    @media screen and (min-width: $width) {
+@mixin min-responsive($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
         @content;
     }
 }
