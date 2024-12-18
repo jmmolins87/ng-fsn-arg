@@ -7,12 +7,14 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { FooterComponent } from './components/footer/footer.component';
+import { SocialNetworksComponent } from './components/social-networks/social-networks.component';
 
 
 @NgModule({
   declarations: [
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    SocialNetworksComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   exports: [
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    SocialNetworksComponent
   ]
 })
 export class SharedModule { }

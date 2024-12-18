@@ -7,8 +7,8 @@ html {
 }
 
 body {
-    background: $color-brand;
-    color: $color-brand-light;
+    background: $bg-white-dark;
+    color: $color-brand-dark;
 }
 
 // TODO: Add dark theme
@@ -73,6 +73,9 @@ li {
 .navbar a {
     font-size: $txt-menu;
     transition: font-size .2s ease-in-out;
+    @include max-responsive($tablet) {
+        font-size: $txt-menu-scrolled;
+    }
 }
 
 .navbar.scroll a {

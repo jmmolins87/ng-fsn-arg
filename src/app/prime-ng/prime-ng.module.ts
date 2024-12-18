@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 
 import { ButtonModule } from 'primeng/button';
-import { MenubarModule } from 'primeng/menubar';
+import { SpeedDialModule } from 'primeng/speeddial';
 
 @NgModule({
   exports: [
     ButtonModule,
-    MenubarModule
+    SpeedDialModule
   ]
 })
 export class PrimeNgModule { }
