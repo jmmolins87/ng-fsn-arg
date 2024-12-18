@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MenuItem } from 'primeng/api';
+import { SharedService } from '../../services/shared.service';
+
+import { DialInterface } from '../../interfaces/dial.interface';
 
 @Component({
   selector: 'app-social-networks',
@@ -9,26 +11,20 @@ import { MenuItem } from 'primeng/api';
 })
 export class SocialNetworksComponent implements OnInit {
 
-  public items: MenuItem[] | null = [];
+  public itemsDial: DialInterface[] | undefined;
+
+  constructor(private _sharedService: SharedService) {}
 
   ngOnInit(): void {
-    this.items = [
-      {
-        icon: 'pi pi-pencil',
-      },
-      {
-        icon: 'pi pi-refresh'
-      },
-      {
-        icon: 'pi pi-trash'
-      },
-      {
-        icon: 'pi pi-upload'
-      },
-      {
-        icon: 'pi pi-external-link'
-      }
-    ];
+    this.getItemsDial();  
+  }
+
+  getItemsDial() {
+    this._sharedService.itemsDial.subscribe(items => {
+      this.itemsDial = items;
+    })
+
+    return this.itemsDial;
   }
 
 }

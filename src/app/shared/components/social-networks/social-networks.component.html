@@ -1,13 +1,14 @@
 
 
 
-
-<div class="card">
-    <p-speedDial 
-    [model]="items" 
-    direction="up" 
-    [transitionDelay]="80" 
-    showIcon="pi pi-bars" 
-    hideIcon="pi pi-times"
-    buttonClassName="p-button-outlined" />
+<div class="wrap-dial">
+    <div class="speeddial-tooltip">
+        <p-speedDial 
+            [model]="itemsDial || null" 
+            direction="up" 
+            [transitionDelay]="80" 
+            showIcon="pi pi-ellipsis-h"
+            hideIcon="pi pi-ellipsis-v" 
+            buttonClassName="p-button-outlined" />
+    </div>
 </div>
