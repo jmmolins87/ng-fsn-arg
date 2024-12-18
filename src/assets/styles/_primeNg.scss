@@ -11,7 +11,7 @@
         button {
             border-radius: $border-radius-50;
             border: none;
-            background: rgba($bg-white, .2);
+            background: $color-brand-light;
             backdrop-filter: blur(1.5rem);
             width: 5rem;
             height: 5rem;
@@ -22,7 +22,7 @@
                 box-shadow: $dialShadow; 
             }
             .pi {
-                color: $color-brand-dark;
+                color: $color-brand;
             }
             @include min-responsive($tablet-hor) {
                 width: 5rem;
@@ -43,10 +43,13 @@
                 height: 5rem;
                 text-decoration: none;
                 padding: .75rem;
-                background: rgba($bg-white, .2);
+                background: rgba($color-brand-light, .2);
                 backdrop-filter: blur(1.5rem);
                 span {
                     font-size: $icon-dial;
+                    &::before {
+                        color: $color-brand;
+                    }
                 }
             }
         } 
