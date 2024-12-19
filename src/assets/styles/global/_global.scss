@@ -52,13 +52,13 @@ h3 {
     }
 }
 
-p, a, span:not(.pi) {
+p, a, span:not(.pi), li {
     font-family: $txt-p;
     font-size: $txt-main;
     color: $color-brand-dark;
 }
 
-a {
+a:not(.p-speeddial-action) {
     text-decoration: none;
     position: relative;
     &::before {

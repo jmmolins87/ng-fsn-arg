@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 
 import { navbarItems } from '../db/navbarItems.db';
 import { footerPoliciesContent } from '../db/footerPolicies.db';
+import { footerContactContent } from '../db/footerContact.db';
 import { dialContent } from '../db/diaItems.db';
 
 import { NavBarInterface } from '../interfaces/nav-bar.interface';
@@ -31,6 +32,15 @@ export class SharedService {
     return new Observable<footerInterface[]>(observer => {
       // Get items from the database
       observer.next(footerPoliciesContent);
+      // Complete de observable
+      observer.complete();
+    })
+  }
+
+  get itemsContactFooter() {
+    return new Observable<footerInterface[]>(observer => {
+      // Get items from the database
+      observer.next(footerContactContent);
       // Complete de observable
       observer.complete();
     })

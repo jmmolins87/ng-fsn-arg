@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { PoliciesModule } from './policies/policies.module';
 import { PagesRoutingModule } from './pages-routing.module';
+
 import { UsPageComponent } from './us-page/us-page.component';
 import { OurTeamPageComponent } from './our-team-page/our-team-page.component';
 import { OurFavDishesPageComponent } from './our-fav-dishes-page/our-fav-dishes-page.component';
@@ -23,7 +25,8 @@ import { HomePageComponent } from './home-page/home-page.component';
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    PoliciesModule
   ]
 })
 export class PagesModule { }

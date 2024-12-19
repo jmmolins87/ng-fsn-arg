@@ -3,9 +3,8 @@
 
 .wrap-dial {
     position: fixed;
-    left: 2rem;
+    right: 6.9rem;
     bottom: calc(8rem + 17.25rem);
-    
     &::ng-deep {
         .p-speeddial-opened {
             bottom: calc(7.5rem - 17.25rem);

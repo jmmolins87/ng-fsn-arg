@@ -24,7 +24,7 @@
             .pi {
                 color: $color-brand;
             }
-            @include min-responsive($tablet-hor) {
+            @include min-responsive($tablet) {
                 width: 5rem;
                 height: 5rem;
                 .pi {
@@ -57,8 +57,8 @@
     // Scroll top
     .p-scrolltop {
         position: fixed;
-        left: 2rem;
-        bottom: 9rem;
+        right: 2rem;
+        bottom: 10rem;
         border-radius: $border-radius-50;
         border: none;
         background: $color-brand-light;
@@ -75,7 +75,7 @@
         .p-icon-wrapper svg {
             color: $color-brand;
         }
-        @include min-responsive($tablet-hor) {
+        @include min-responsive($tablet) {
             width: 5rem;
             height: 5rem;
             .pi {

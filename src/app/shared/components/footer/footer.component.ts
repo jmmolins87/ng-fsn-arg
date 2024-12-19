@@ -14,11 +14,13 @@ export class FooterComponent implements OnInit {
 
   public currentYear: number = new Date().getFullYear();
   public policies: footerInterface[] = [];
+  public contactItems: footerInterface[] = [];
 
   constructor( private _sharedService: SharedService ) {}
 
   ngOnInit(): void {
     this.getPolicies();
+    this.getContact();
   }
 
   getPolicies() {
@@ -26,6 +28,13 @@ export class FooterComponent implements OnInit {
       this.policies = items;
     });
     return this.policies;
+  }
+
+  getContact() {
+    this._sharedService.itemsContactFooter.subscribe(items => {
+      this.contactItems = items;
+    });
+    return this.contactItems;
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 import { PrimeNGConfig } from 'primeng/api';
 
@@ -9,7 +10,7 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent implements OnInit {
   
-  constructor( private primengConfig: PrimeNGConfig ) { }
+  constructor(private router: Router, private primengConfig: PrimeNGConfig ) { }
 
   ngOnInit() {
     // Ripple effect
@@ -21,5 +22,11 @@ export class AppComponent implements OnInit {
       menu: 1000,     // overlay menus
       tooltip: 1100   // tooltip
     };
+    // Go to Top when route changes
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
   }
 }

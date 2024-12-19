@@ -6,15 +6,15 @@ import { footerInterface } from "../interfaces/footer.interface";
 
 export const footerPoliciesContent: footerInterface[] = [
     {
-        label: "Aviso legal",
+        label: "FOOTER_ITEMS.LEGAL",
         link: ['/legal']
     },
     {
-        label: "Política de cookies",
+        label: "FOOTER_ITEMS.COOKIES",
         link: ['/cookies']
     },
     {
-        label: "Política de privacidad",
+        label: "FOOTER_ITEMS.PRIVACITY",
         link: ['/privacity']
     }
 ]

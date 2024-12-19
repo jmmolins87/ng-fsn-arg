@@ -5,19 +5,26 @@
         <div class="wrapper-footer">
             <ul class="wrap-polities">
                 <li *ngFor="let policie of policies">
-                    <a [routerLink]="policie.link">{{ policie.label }}</a>
+                    <a [routerLink]="policie.link">{{ policie.label | translate }}</a>
                 </li>
             </ul>
-            <div class="wrap-logo">
+            <div [routerLink]="['/']" class="wrap-logo">
                 <img 
                     src="/assets/images/logo_light.png" 
                     [alt]="'FOOTER_ITEMS.LOGO' | translate" 
                     [title]="'FOOTER_ITEMS.LOGO' | translate">
             </div>
-            <div class="wrap-info">
-                <p>&copy; {{ "FOOTER_ITEMS.RIGHTS" | translate }} <span>{{ currentYear }}</span></p>
-                <p>{{ "FOOTER_ITEMS.MY_LEGEND" | translate }} <i class="pi pi-heart-fill"></i></p>
-            </div>
+            <ul class="wrap-location">
+                <li *ngFor="let contact of contactItems">
+                    <a [routerLink]="contact.label"><i class="{{ contact.icon }}"></i> {{ contact.label | translate }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap-info">
+        <div class="wrap-info">
+            <p>&copy; {{ "FOOTER_ITEMS.RIGHTS" | translate }} <span>{{ currentYear }}</span></p>
+            <p>{{ "FOOTER_ITEMS.MY_LEGEND" | translate }} <i class="pi pi-heart-fill"></i></p>
         </div>
     </div>
 </footer>

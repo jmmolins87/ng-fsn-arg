@@ -8,6 +8,10 @@ import { OurFavDishesPageComponent } from './our-fav-dishes-page/our-fav-dishes-
 import { OurLetterPageComponent } from './our-letter-page/our-letter-page.component';
 import { EventsPageComponent } from './events-page/events-page.component';
 import { ReservationsPageComponent } from './reservations-page/reservations-page.component';
+// Policies
+import { LegalNoticeComponent } from './policies/legal-notice/legal-notice.component';
+import { CookiePolicyComponent } from './policies/cookie-policy/cookie-policy.component';
+import { PrivacyPolicyComponent } from './policies/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
   {
@@ -38,6 +42,18 @@ const routes: Routes = [
   {
     path: 'reservations',
     component: ReservationsPageComponent
+  },
+  {
+    path: 'legal',
+    component: LegalNoticeComponent
+  },
+  {
+    path: 'cookies',
+    component: CookiePolicyComponent
+  },
+  {
+    path: 'privacity',
+    component: PrivacyPolicyComponent
   },
   {
     path: '**',

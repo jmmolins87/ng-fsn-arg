@@ -1,0 +1,13 @@
+
+
+
+@import "/src/styles.scss";
+
+.wrap-privacity {
+    margin: 1rem 0;
+    main {
+        @include min-responsive($mobile-large) {
+            @include grid(3, 2.5rem)
+        }
+    }
+}
