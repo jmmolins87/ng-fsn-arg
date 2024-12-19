@@ -2,9 +2,22 @@
 
 <footer class="wrap-footer">
     <div class="container">
-        <div class="wrap-info">
-            <p>&copy; {{ "FOOTER_ITEMS.RIGHTS" | translate }} <span>{{ currentYear }}</span></p>
-            <p>{{ "FOOTER_ITEMS.MY_LEGEND" | translate }} <i class="pi pi-heart-fill"></i></p>
+        <div class="wrapper-footer">
+            <ul class="wrap-polities">
+                <li *ngFor="let policie of policies">
+                    <a [routerLink]="policie.link">{{ policie.label }}</a>
+                </li>
+            </ul>
+            <div class="wrap-logo">
+                <img 
+                    src="/assets/images/logo_light.png" 
+                    [alt]="'FOOTER_ITEMS.LOGO' | translate" 
+                    [title]="'FOOTER_ITEMS.LOGO' | translate">
+            </div>
+            <div class="wrap-info">
+                <p>&copy; {{ "FOOTER_ITEMS.RIGHTS" | translate }} <span>{{ currentYear }}</span></p>
+                <p>{{ "FOOTER_ITEMS.MY_LEGEND" | translate }} <i class="pi pi-heart-fill"></i></p>
+            </div>
         </div>
     </div>
 </footer>

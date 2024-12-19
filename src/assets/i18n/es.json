@@ -12,6 +12,10 @@
     },
     "FOOTER_ITEMS": {
         "RIGHTS": "Todos los derechos reservados",
-        "MY_LEGEND": "Sitio creado con mucho"
+        "MY_LEGEND": "Sitio creado con mucho",
+        "LOGO": "Fusión Argentina",
+        "LEGAL": "Aviso legal",
+        "COOKIES": "Política de cookies",
+        "PRIVACITY": "Política de privacidad"
     }
 }

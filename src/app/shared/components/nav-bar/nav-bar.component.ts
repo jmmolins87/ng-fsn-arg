@@ -19,7 +19,7 @@ export class NavBarComponent implements OnInit {
   public menuItems!: NavBarInterface[] | any[];
   // When user scrolls page
   public scrolled: boolean = false;
-
+  // It is bigger than a tablet
   public isTablet: boolean = false;
 
   constructor( 

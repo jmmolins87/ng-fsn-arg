@@ -1,11 +1,11 @@
 <nav [ngClass]="scrolled ? 'scroll' : ''" class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" [routerLink]="['/']">
+        <span [routerLink]="['/']" class="navbar-brand">
             <img 
                 src="/assets/images/logo_light.png" 
                 [alt]="'NAVBAR_ITEMS.LOGO' | translate" 
                 [title]="'NAVBAR_ITEMS.LOGO' | translate">
-        </a>
+        </span>
         <button 
             type="button" 
             data-bs-toggle="collapse" 
