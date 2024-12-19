@@ -54,4 +54,36 @@
             }
         } 
     }
+    // Scroll top
+    .p-scrolltop {
+        position: fixed;
+        left: 2rem;
+        bottom: 9rem;
+        border-radius: $border-radius-50;
+        border: none;
+        background: $color-brand-light;
+        backdrop-filter: blur(1.5rem);
+        width: 5rem;
+        height: 5rem;
+        z-index: 1002;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        transition: box-shadow .2s ease-in-out;
+        &:hover,
+        &:focus {
+            box-shadow: $dialShadow;
+        }
+        .p-icon-wrapper svg {
+            color: $color-brand;
+        }
+        @include min-responsive($tablet-hor) {
+            width: 5rem;
+            height: 5rem;
+            .pi {
+                &.pi-icon {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+    }
 }

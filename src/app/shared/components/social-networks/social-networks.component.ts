@@ -11,7 +11,7 @@ import { DialInterface } from '../../interfaces/dial.interface';
 })
 export class SocialNetworksComponent implements OnInit {
 
-  public itemsDial: DialInterface[] | undefined;
+  public itemsDial!: DialInterface[];
 
   constructor(private _sharedService: SharedService) {}
 

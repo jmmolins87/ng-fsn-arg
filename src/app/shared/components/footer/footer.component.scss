@@ -3,6 +3,34 @@
 @import "/src/styles.scss";
 
 .wrap-footer {
-    height: 75px;
-    background: $color-brand;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    background: $color-brand-light;
+    color: $color-brand-dark;
+    text-align: center;
+    @include min-responsive($tablet) {
+        flex-direction: row;
+    }
+    .wrap-info {
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        @include min-responsive($tablet) {
+            justify-content: flex-start;
+            align-items: flex-start;
+        }      
+        p {
+            margin: 0;
+        }
+        .pi {
+            color: $color-brand-dark;
+        }
+    }
 }

@@ -9,5 +9,9 @@
         "OUR_LETTER": "Nuestra carta",
         "RESERVATIONS": "Reservas",
         "EVENTS": "Eventos"
+    },
+    "FOOTER_ITEMS": {
+        "RIGHTS": "Todos los derechos reservados",
+        "MY_LEGEND": "Sitio creado con mucho"
     }
 }
